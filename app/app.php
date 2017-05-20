@@ -31,7 +31,7 @@
   /**
    * Creating a Session Middleware
    */
-  $app->add(new \RKA\SessionMiddleware(['name' => 'reminder']));
+  $app->add(new \RKA\SessionMiddleware(['name' => 'almamzar']));
 
   /**
    * Creating a Container instance
