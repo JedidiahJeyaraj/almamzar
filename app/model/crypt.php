@@ -1,6 +1,6 @@
 <?php
 
-class LOGIN{
+class CRYPT{
     public static function encrypt_decrypt($action, $string) {
         $output = false;
 
