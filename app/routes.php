@@ -11,11 +11,11 @@
    * for loading the login page
    */
   // $app->get('/logininto', function($request, $response){
-  //     $db = $this->db;
-  //     $router = $this->router;
-  //     $result = $db->select('login','*');
-  //     var_dump($result[0]['password']);
-  //   //   return LOGIN::encrypt_decrypt('encrypt', 'jedi');
+  //   //   $db = $this->db;
+  //   //   $router = $this->router;
+  //   //   $result = $db->select('login','*');
+  //   //   var_dump($result[0]['password']);
+  //     return CRYPT::encrypt_decrypt('encrypt', 'ashish');
   // })->setName('login');
 
 
@@ -140,14 +140,5 @@ $app->post('/forgot', function($request, $response){
       mail($email, $subject, $content, $info);
       $body->write(json_encode(['status'=>'success','message'=>'Password Sent To Registered Email']));
       return $response->withHeader('Content-Type', 'application/json')->withBody($body);
-    //   if(mail($email, $subject, $content, $info))
-    //   {
-    //       $body->write(json_encode(['status'=>'success','message'=>'Password Sent To Registered Email']));
-    //       return $response->withHeader('Content-Type', 'application/json')->withBody($body);
-    //   }
-    //   else{
-    //       $body->write(json_encode(['status'=>'fail', 'message'=>"Server Error Occoured. Please try again"]));
-    //       return $response->withHeader('Content-Type', 'application/json')->withBody($body);
-    //   }
 
 })->setName('forgot_api');
