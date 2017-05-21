@@ -723,7 +723,7 @@ blockquote div.author::before {
 .image a.zoom, .project-gallery .item a.zoom, .services .item a.zoom, .post-media a.zoom {
 	position: absolute;
 	right: -4.5em;
-	left: auto;
+	left: 45%;
 	bottom: -4.5em;
 }
 .image:hover a.zoom, .project-gallery .item:hover a.zoom, .services .item:hover a.zoom, .post-media:hover a.zoom {
