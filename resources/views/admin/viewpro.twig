@@ -58,72 +58,6 @@
     <!-- Content Header (Page header) -->
     <!-- Main content -->
     <section class="content">
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>{{pro_count}}</h3>
-
-              <p>Total Projects</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>{{gal_count}}</h3>
-
-              <p>Total Gallery Image</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>{{pagehits}}</h3>
-
-              <p>Page Hits</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <!-- <div class="small-box bg-red">
-            <div class="inner">
-              <h3>65</h3>
-
-              <p>Unique Visitors</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div> -->
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-      <!-- Main row -->
-            <!-- /.row (main row) -->
         <div class="row">
         <div class="col-md-12">
           <div class="box">
@@ -136,8 +70,8 @@
                 <tr>
                   <th style="width: 10px">#</th>
                   <th>Project Name</th>
-                  <th>Upload Date <span style="color:Red">(YYYY-MM-DD HH:MM:SS)</span></th>
-
+                  <th >Upload Date <span style="color:Red">(YYYY-MM-DD HH:MM:SS)</span></th>
+                  <th></th>
                 </tr>
                 {% set i = 0 %}
                 {% for project in projects %}
@@ -146,6 +80,11 @@
                   <td>{{i}}</td>
                   <td>{{project.name}}</td>
                   <td>{{project.create_date}}</td>
+                  <td>
+                      <button value="{{project.sno}}" class="btn  btn-primary">View</button>
+                      <button value="{{project.sno}}" class="btn  btn-warning">Edit</button>
+                      <button value="{{project.sno}}" class="btn  btn-danger">Delete</button>
+                  </td>
                 </tr>
                 {% endfor %}
               </table>

@@ -4,6 +4,18 @@
 
   $app->get('/', function($request, $response, $args){
     // return "hello";
+    $db = $this->db;
+    $cnt = $db->select('functional','*',[
+        'AND'=>[
+            "sno"=>1
+        ]
+    ]);
+    $cnt = $cnt[0]['count'] + 1;
+    $db->update('functional',[
+        "count"=> $cnt
+    ],[
+        "sno"=>1
+    ]);
     return $this->view->render($response, 'index.twig');
   })->setName('index_page');
 
@@ -35,16 +47,97 @@
     if(!$session->get('active', false)){
         return $response->withRedirect($this->router->pathFor('login'));
     }
-    return $this->view->render($response, 'admin/index.twig');
+    $db = $this->db;
+
+    $projects = $db->select('project', '*');
+    $procount = count($projects);
+    $galimg = $db->select('portfolio', '*',[
+            "AND" => [
+                "gal_disp" => 1
+            ]
+        ]);
+    $galimgcount = count($galimg);
+    $pagehits = $db->select('functional','*',[
+        'AND'=>[
+            "sno"=>1
+        ]
+    ]);
+    $pagehits = $pagehits[0]['count'];
+    // var_dump($project);
+
+
+    return $this->view->render($response, 'admin/index.twig', [
+        "projects"=>$projects,
+        "pro_count"=>$procount,
+        "gal_count"=>$galimgcount,
+        "pagehits"=>$pagehits
+    ]);
 })->setName('admin_dashboard');
 
 
 
 
+$app->get('/projects', function($request, $response, $args){
+  // return "hello";
+  $session = new RKA\Session();
 
-/**********************************************************************************************************************************************
------------------------------------------------Login API---------------------------------------------------------------------------------------
-**********************************************************************************************************************************************/
+  // If user not logged in redirect to Login.
+  if(!$session->get('active', false)){
+      return $response->withRedirect($this->router->pathFor('login'));
+  }
+  $db = $this->db;
+
+  $projects = $db->select('project', '*');
+  return $this->view->render($response, 'admin/viewpro.twig', [
+      "projects"=>$projects,
+  ]);
+
+  })->setName('view_project');
+
+  $app->post('/createpro', function($request, $response){
+      $session = new RKA\Session();
+      $db = $this->db;
+      $body = $response->getBody();
+      $data = $request->getParsedBody();
+
+      if(!$session->get('active', false)){
+          return $response->withRedirect($this->router->pathFor('login'));
+      }
+
+      $pro_name = $data['pro_name'] or NULL;
+    //   return $user;
+      if($pro_name == NULL)
+      {
+          $body->write(json_encode(['status'=>'fail', 'message'=>'Empty values.']));
+          return $response->withHeader('Content-Type', 'application/json')->withBody($body);
+      }
+
+      $projects = $db->select('project','*', [
+              'AND'=>[
+                  "name" => strtoupper($pro_name)
+              ]
+          ]
+      );
+
+      if(count($projects)>0)
+        {
+            $body->write(json_encode(['status'=>'fail', 'message'=>"Project Name Already exists."]));
+            return $response->withHeader('Content-Type', 'application/json')->withBody($body);
+        }
+
+        $db->insert('project',[
+            "name" => strtoupper($pro_name)
+        ]);
+
+        $body->write(json_encode(['status'=>'success','message'=>'Project Created Successfully']));
+        return $response->withHeader('Content-Type', 'application/json')->withBody($body);
+        // return $response->withHeader('Content-Type', 'application/json')->withAddedHeader('Location', '/')->withBody($body);
+
+  })->setName('createpro_api');
+
+/******************************************************************************************************************************************
+-----------------------------------------------Login API----------------------------------------------------------------------------------
+******************************************************************************************************************************************/
     $app->get('/login', function($request, $response){
        return $this->view->render($response, 'admin/login.twig');
     })->setName('login');
