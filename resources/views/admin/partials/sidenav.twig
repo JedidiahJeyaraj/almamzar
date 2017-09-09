@@ -35,15 +35,8 @@
           <li><a data-toggle="modal" data-target="#create_project" href="#"><i class="fa fa-circle-o"></i> Create Project</a></li>
         </ul>
       </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-th"></i> <span>Update Portfoilo</span>
-          <!-- <span class="pull-right-container">
-            <small class="label pull-right bg-green">new</small>
-          </span> -->
-        </a>
-      </li>
-      <li class="treeview">
+
+      <!-- <li class="treeview">
         <a href="#">
           <i class="fa fa-pie-chart"></i>
           <span>Services</span>
@@ -55,10 +48,10 @@
           <li><a href="#"><i class="fa fa-circle-o"></i> View Services</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Add Service</a></li>
         </ul>
-      </li>
+      </li> -->
       <li>
-        <a href="#">
-          <i class="fa fa-folder"></i> <span>Gallery Images</span>
+        <a href="{{ path_for('mainpageimages',{ 'err' : '0'}) }}">
+          <i class="fa fa-folder"></i> <span>Main Page Images</span>
           <!-- <span class="pull-right-container">
             <small class="label pull-right bg-red">3</small>
             <small class="label pull-right bg-blue">17</small>
@@ -80,7 +73,7 @@
       </div>
       <form id="create-pro-form" onsubmit="return false;">
       <div class="modal-body">
-        <input type='text' class="form-control" placeholder="Project Name" name="pro_name" id="pro_name" />
+        <input type='text' class="form-control" placeholder="Project Name" name="pro_name" id="pro_name"  autofocus=""/>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -104,30 +97,12 @@
         data: parcel,
         success:function (result) {
           if(result.status=="success"){
-              swal({
-          title: "Congrats",
-          text: result.message,
-          type: "success",
-          confirmButtonColor: "#71f442",
-          confirmButtonText: "Ok",
-          closeOnConfirm: false
-        },
-        function(){
-          location.reload();
-        });
+            swal("Congrats", result.message, 'success');
+            setTimeout(function(){
+                location.reload();
+            }, 2000);
           }else{
-              swal({
-          title: "Something went Wrong",
-          text: result.message,
-          type: "warning",
-          confirmButtonColor: "#71f442",
-          confirmButtonText: "Ok",
-          closeOnConfirm: false
-        },
-        function(){
-          location.reload();
-        });
-
+        swal("Something went Wrong", result.message, 'warning');
           }
         }
       });

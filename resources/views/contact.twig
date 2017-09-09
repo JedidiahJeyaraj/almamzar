@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>:: Contact Us | Almamzar decor cont. LLC ::</title>
+<meta name="description" content="Welcome to  Almamzar decor cont. LLC">
+<meta name="keywords" content="interior, design, services, expert, analysis, structure, luxury, home, kitchen, berdroom, living room, bathroom, kid, office, infrastructure">
+<meta name="author" content="Jedidiah Jeyaraj">
+<!-- Mobile Specific Meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Google Font Code -->
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets -->
+<link href="{{ base_url() }}\public\main\css\bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="{{ base_url() }}\public\main\fonts\font-awesome\css\font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ base_url() }}\public\main\css\animate.min.css">
+<link rel="stylesheet" href="{{ base_url() }}\public\main\css\prettyPhoto.css">
+<link rel="stylesheet" href="{{ base_url() }}\public\main\css\jquery.datetimepicker.css">
+<link rel="stylesheet" href="{{ base_url() }}\public\main\css\bxslider.css">
+<link rel="stylesheet" href="{{ base_url() }}\public\main\css\color.css">
+<link rel="stylesheet" href="{{ base_url() }}\public\main\css\style.css">
+<link href="{{ base_url() }}/public/admpan/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+<script src="{{ base_url() }}/public/admpan/sweetalert2/sweetalert2.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\modernizr.custom.js"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- Favicon and Apple Icons -->
+<link rel="shortcut icon" href="{{ base_url() }}\public\main\images\icons\favicon.ico">
+<link rel="apple-touch-icon" href="{{ base_url() }}\public\main\images\icons\apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ base_url() }}\public\main\images\icons\apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ base_url() }}\public\main\images\icons\apple-touch-icon-114x114.png">
+</head>
+
+<body id="top" onload="initialize()" class="inner">
+<div id="preloader">
+	<img src="{{ base_url() }}\public\main\images\Preloader.gif" alt="Preloader">
+</div>
+
+<!-- ::: START HEADER ::: -->
+{% include 'partials/topnav.twig' %}
+<!-- ::: END ::: -->
+
+<!--  :::  BREADCRUMBS ::: -->
+<section class="breadcrumbs breadcrumbs2 contact wow fadeInDown" data-wow-duration="0.25s" data-wow-delay="0.45s" style="margin-bottom:20px">
+  <div class="boxedeb">
+    <div class="container page-block-small">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+          <h2>Contact Us</h2>
+          <span class="line"></span>
+        <div class="rightText">
+            <a href="index.htm" title="Home">Home</a> / Contact Us
+        </div>
+      </div>
+    </div><!--end-container-->
+  </div>
+</section>
+<!-- ::: END ::: -->
+
+<!--  :::  CONTACT ::: -->
+<section id="contact" class="">
+
+    <div class="contact-info">
+      <div class="container">
+		 <div class="col-md-2"></div>
+        <div class="col-md-3 col-sm-12 col-xs-12 BGprime page-block-full wow fadeInUp" data-wow-duration="0.50s" data-wow-delay="0.50s">
+            <div class="office first">
+              <h5>Sharjah</h5>
+              <span><i class="fa fa-map-marker"></i> P.O. Box: 63773,<br>
+                Sharjah, U.A.E.</span>
+               <span><i class="fa fa-phone"></i> 06 5743120</span>
+			   <span><i class="fa fa-fax"></i> 06 5348542</span>
+              <span><i class="fa fa-envelope"></i> <a href="mailto:almamzar@gmail.com " title="Contact">almamzar@gmail.com</a></span>
+            </div>
+        </div>
+		<div class="col-md-2"></div>
+		<div class="col-md-3 col-sm-12 col-xs-12 BGdark page-block-full wow fadeInUp" data-wow-duration="0.50s" data-wow-delay="0.50s">
+            <div class="office first">
+              <h5>Dubai</h5>
+              <span><i class="fa fa-map-marker"></i> P.O. Box: 30735,<br>
+                Dubai,  U.A.E.</span>
+               <span><i class="fa fa-phone"></i> 04 3537223</span>
+			   <span><i class="fa fa-fax"></i> 04 3538124</span>
+              <span><i class="fa fa-envelope"></i> <a href="mailto:almamzar@gmail.com " title="Contact">almamzar@gmail.com</a></span>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+      </div>
+    </div>
+
+    <div class="container page-block text-center wow fadeInUp" data-wow-duration="0.50s" data-wow-delay="0.50s">
+    	<h3 class="prime">Book Appointment</h3>
+        <span class="line"></span>
+     	<p class="text-center">Fill up form below for appointment and our <strong>Expert</strong> will contact you soon. <small>All fields are required.</small></p>
+        <form id="contact_form1" onsubmit="return false;">
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" value="" id="datetimepicker" name="datetimepicker" placeholder="Preffered Date & Time">
+          </div>
+          <div class="col-md-12">
+            <textarea cols="60" rows="3" id="comment" name="comment" class="form-control" placeholder="Write your comment here..."></textarea>
+          </div>
+          <div class="col-md-12">
+              <input type="submit" value="Submit" class="btn btn-primary btn-lg" id="submit" name="submit">
+          </div>
+        </form>
+    </div>
+</section>
+<!-- ::: END ::: -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        $('#contact_form1').submit(function(){
+            var parcel = $(this).serialize();
+
+		console.log(parcel);
+
+		$.ajax({
+        url:"{{ path_for('contact_api') }}",
+        type: "POST",
+        data: parcel,
+        success:function (result) {
+          if(result.status=="success"){
+            swal('Message Sent',result.message,'success');
+			setTimeout(function(){
+				location.reload();
+			}, 3000);
+          }else{
+            swal('Something went Wrong !',result.message,'warning');
+          }
+        }
+      });
+    // $(this).hide();
+        });
+    });
+</script>
+
+<!--  :::  FOOTER ::: -->
+{% include 'partials/footer.twig' %}
+<!-- ::: END ::: -->
+<a href="#top" class="top"><i class="fa fa-angle-up fa-lg"></i></a>
+
+<!--START SCRIPTS -->
+<script src="{{ base_url() }}\public\main\js\jquery.min.js"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+<script src="{{ base_url() }}\public\main\js\imagesloaded.pkgd.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\jquery-ui.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\jquery.ui.touch-punch.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\isotope.pkgd.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\bootstrap.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\classie.js"></script>
+<script src="{{ base_url() }}\public\main\js\waypoints.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\jquery.countTo.js"></script>
+<script src="{{ base_url() }}\public\main\js\jquery.prettyPhoto.js"></script>
+<script src="{{ base_url() }}\public\main\js\wow.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\jquery.datetimepicker.js"></script>
+<script src="{{ base_url() }}\public\main\js\placeholders.js"></script>
+<script src="{{ base_url() }}\public\main\js\jquery.bxslider.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\owl.carousel.min.js"></script>
+<script src="{{ base_url() }}\public\main\js\custom.js"></script>
+<script src="{{ base_url() }}\public\main\js\master.js"></script>
+
+</body>
+</html>

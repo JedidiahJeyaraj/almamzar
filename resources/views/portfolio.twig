@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>:: {{imgs.0.name}} | Almamzar decor cont. LLC ::</title>
+	<meta name="description" content="Welcome to  Almamzar decor cont. LLC">
+	<meta name="keywords" content="interior, design, services, expert, analysis, structure, luxury, home, kitchen, berdroom, living room, bathroom, kid, office, infrastructure">
+	<meta name="author" content="Jedidiah Jeyaraj">
+
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font Code -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+
+	<!-- Stylesheets -->
+	<link href="{{ base_url() }}\public\main\css\bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="{{ base_url() }}\public\main\fonts\font-awesome\css\font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ base_url() }}\public\main\css\animate.min.css">
+	<link rel="stylesheet" href="{{ base_url() }}\public\main\css\prettyPhoto.css">
+	<link rel="stylesheet" href="{{ base_url() }}\public\main\css\jquery.datetimepicker.css">
+	<link rel="stylesheet" href="{{ base_url() }}\public\main\css\bxslider.css">
+	<link rel="stylesheet" href="{{ base_url() }}\public\main\css\color.css">
+	<link rel="stylesheet" href="{{ base_url() }}\public\main\css\style.css">
+
+	<script src="{{ base_url() }}\public\main\js\modernizr.custom.js"></script>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- Favicon and Apple Icons -->
+	<link rel="shortcut icon" href="{{ base_url() }}\public\main\images\icons\favicon.ico">
+	<link rel="apple-touch-icon" href="{{ base_url() }}\public\main\images\icons\apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ base_url() }}\public\main\images\icons\apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ base_url() }}\public\main\images\icons\apple-touch-icon-114x114.png">
+</head>
+
+<body id="top" onload="initialize()" class="inner">
+	<div id="preloader">
+		<img src="{{ base_url() }}\public\main\images\Preloader.gif" alt="Preloader">
+	</div>
+
+	<!-- ::: START HEADER ::: -->
+	{% include 'partials/topnav.twig' %}
+	<!-- ::: END ::: -->
+
+	<!-- ::: END ::: -->
+
+	<!--  :::  BREADCRUMBS ::: -->
+	<section class="breadcrumbs breadcrumbs2 portfolioBG wow fadeInDown" data-wow-duration="0.25s" data-wow-delay="0.45s">
+		<div class="boxedeb">
+			<div class="container page-block-small">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<h2>{{Gallery}}</h2>
+					<span class="line"></span>
+					<div class="rightText">
+						<a href="{{ path_for('index_page') }}" title="Home">Home</a> / <a href="{{ path_for('gallery') }}" title="Gallery">Gallery</a> / {{imgs.0.name}}
+					</div>
+				</div>
+			</div>
+			<!--end-container-->
+		</div>
+	</section>
+	<!-- ::: END ::: -->
+
+	<!--  :::  PORTFOLIO ::: -->
+	<section id="project-single" class="">
+
+		<div class="project-gallery">
+			<div class="gallery-heading BGlight page-block-small wow fadeInUp" data-wow-duration="0.50s" data-wow-delay="0.50s">
+				<div class="container">
+					<div class="col-md-4 col-sm-5 col-xs-12">
+						<h1><i class="fa fa-paint-brush squareSmall BGsec"></i>{{imgs.0.name}}</h1></div>
+
+				</div>
+			</div>
+
+			<div class="container wow fadeInUp" data-wow-duration="0.50s" data-wow-delay="0.50s">
+				<div class="grid two page-block">
+					{% for img in imgs %}
+					<div class="item" style="width:500px; height:371px; background:transparent">
+						<img class="img-responsive" src="..\images\{{img.project_no}}\{{img.img_name}}" alt="" style="width:100%; height:100%;">
+						<div class="overlay">
+							<a class="zoom" href="..\images\{{img.project_no}}\{{img.img_name}}" data-rel="prettyPhoto[gallery1]" title="{{img.name}}"><i class="fa fa-search-plus square"></i></a>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+	<!-- ::: END ::: -->
+
+	<!--  :::  RECENT PROJECT ::: -->
+	<!-- ::: END ::: -->
+
+	<!--  :::  CALL TO ACTION BOX ::: -->
+	{% include 'partials/getaquote.twig' %}
+	<!-- ::: END ::: -->
+
+	<!--  :::  FOOTER ::: -->
+	{% include 'partials/footer.twig' %}
+	<!-- ::: END ::: -->
+	<a href="#top" class="top"><i class="fa fa-angle-up fa-lg"></i></a>
+
+	<!--START SCRIPTS -->
+	<script src="{{ base_url() }}\public\main\js\jquery.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\imagesloaded.pkgd.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\jquery-ui.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\jquery.ui.touch-punch.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\isotope.pkgd.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\bootstrap.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\classie.js"></script>
+	<script src="{{ base_url() }}\public\main\js\waypoints.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\jquery.countTo.js"></script>
+	<script src="{{ base_url() }}\public\main\js\jquery.prettyPhoto.js"></script>
+	<script src="{{ base_url() }}\public\main\js\wow.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\jquery.datetimepicker.js"></script>
+	<script src="{{ base_url() }}\public\main\js\placeholders.js"></script>
+	<script src="{{ base_url() }}\public\main\js\jquery.bxslider.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\owl.carousel.min.js"></script>
+	<script src="{{ base_url() }}\public\main\js\custom.js"></script>
+	<script src="{{ base_url() }}\public\main\js\master.js"></script>
+
+
+	</body>
+	</html>

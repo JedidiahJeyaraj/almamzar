@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* CSS Document 
+/* CSS Document
 Author Name: Saptarang
 Author URI: http://www.saptarang.org
 Themeforest: http://themeforest.net/user/saptarang?ref=saptarang
@@ -16,22 +16,24 @@ Description: A default stylesheet for Striking Interior Design Template, Designe
 
 */
 /* +=+=+=+=+=+=+=+=+=+=+=+=+=+=+= \
------ PRIMARY 
+----- PRIMARY
 \ +=+=+=+=+=+=+=+=+=+=+=+=+=+=+= */
 a, a:focus, .prime, a, ul.list-default li:before, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav li:hover a, .breadcrumbs .rightText a:hover, #testimonials h4, .panel-default > .panel-heading h4 a:before, .navbar-default .navbar-nav li > .sub-nav li > a:before, blockquote div.author::before, .recent-project ul.bxslider li .project-data li strong, .member-info .meta-data strong, h1.big strong, #contact .info_content h5, .frame > div .oops, .styled div span, .missing ul.list-inline li:hover i, .links li a:hover, .post-meta li a:hover, .post-meta li:hover::before, article.format-quote div.author h5, aside.widget input[type="submit"], aside .widget-title strong, aside.widget ul li span, aside.widget ul li a:hover, .post-header h3 a:hover, .post-navigation a:hover, .post-navigation a i, .sitemap a:hover, .staff .member .info h4, .staff .member .info .bio li i, .services .info-block-bordered:hover h5 a {
-	color: #e54b49;
+	color: #4989e5;
 }
 /* Background PRIMARY */
 .btn-primary, .btn-primary:focus, .btn-primary.focus, button:focus, .BGprime, .btn-light:hover, .navbar-nav li .sub-nav li .sub-nav li:hover, .navbar-nav li .sub-nav li .sub-nav li .sub-nav li:hover, .promoBox .commercial:hover .absShape, .staff .team.rectangle:hover .info, .staff.opt .team.rectangle:hover .info, .staff .team.square:hover .info, .staff.opt .team.square:hover .info, ul.list-main li:hover:before, td.xdsoft_today > div, td.xdsoft_current > div, td.xdsoft_date > div:hover, .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current, .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover, .xdsoft_datetimepicker .xdsoft_calendar .xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box .xdsoft_time:hover, .btn-dark:hover, .nav-tabs > li.active, .nav-tabs > li:hover, .item a.link i, button.active, .square1, .post-date, .post-footer .more:hover, .widget.tags a:hover, .navbar-nav li .sub-nav li:hover, #comments .comment-box .comment-meta a.btn:hover, ul.social li:hover a, .pagination > li > a.active, .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus, .navbar-nav li.sub > .sub-nav > li.sub span.clicks, #menu.in .navbar-nav li.sub > span.clicks, footer.footer2 .social a:hover, #owl-recent-project .item, .BGlight ul.list-main li:hover::before, .boxed section.BGprime, .jumbo a.btn-default.light:hover, .boxed aside .widget-title {
-	background-color: #e54b49;
+	background-color:#4989e5;
 }
 
+/*#e54b49*/
+
 ::-moz-selection {
- background: #e54b49;
+ background: #4989e5;
  color: #fff;
 }
 ::selection {
-	background: #e54b49;
+	background: #4989e5;
 	color: #fff;
 }
 /* use rgba values here */
@@ -45,10 +47,10 @@ a, a:focus, .prime, a, ul.list-default li:before, .navbar-default .navbar-nav > 
 	background-color: rgba(229, 75, 73, 0.5);
 }
 .navbar-nav > li > .sub-nav, .navbar-nav > li > .sub-nav > li > .sub-nav > li > .sub-nav, .coming ul.list-inline li:hover i, .missing ul.list-inline li:hover i {
-	border-color: #e54b49;
+	border-color: #4989e5;
 }
 /* +=+=+=+=+=+=+=+=+=+=+=+=+=+=+= \
------ SECONDARY 
+----- SECONDARY
 \ +=+=+=+=+=+=+=+=+=+=+=+=+=+=+= */
 a:hover, .sec, .btn-sec, .stat h4, footer .office span i, .navbar-default .navbar-nav li > .sub-nav li > .sub-nav li > a:before, .copyright a:hover, .recent-project ul.bxslider li .project-data li:hover i, .post-meta li::before, .calltoAction .widget i.opaque, footer .widget .category-post:hover a, .staff .member .info h4:hover, .header-top span i, .stat i, footer.footer2 a:hover, footer.footer2 .copyright ul li a:hover {
 	color: #eeae1e;
@@ -71,7 +73,7 @@ a:hover, .sec, .btn-sec, .stat h4, footer .office span i, .navbar-default .navba
 	border-color: #eeae1e;
 }
 /* +=+=+=+=+=+=+=+=+=+=+=+=+=+=+= \
------ DARK 
+----- DARK
 \ +=+=+=+=+=+=+=+=+=+=+=+=+=+=+= */
 h1, h2, h3, h4, h5, h6, .navbar-default .navbar-nav li a, .navbar-default .navbar-nav li:hover ul li a, #testimonials h4 span, h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .xdsoft_datetimepicker .xdsoft_month span, .xdsoft_datetimepicker .xdsoft_year span, i.square.BGlight, i.squareSmall.BGlight, i.square.outline, i.squareSmall.outline, a.outline, a.outline:hover, .btn.btn-default, .btn.btn-default:hover, .navbar-default .navbar-nav li > .sub-nav li > .sub-nav li > .sub-nav li > a:before, .btn-light, .project-gallery.recent .item h6, .links li a, .post-meta li a, aside.widget ul li a, .post-header h3 a, .widget.tags a, .post-navigation a, .pagination > li > a, .sitemap a, .nav-tabs > li a, .stat.noBG h1, .stat.noBG h4, .services .info-block-bordered h5 a {
 	color: #56524c;

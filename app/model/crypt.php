@@ -5,8 +5,8 @@ class CRYPT{
         $output = false;
 
         $encrypt_method = "AES-256-CBC";
-        $secret_key = 'Hello Almamzar';
-        $secret_iv = 'hiii Almamzar';
+        $secret_key = 'This is my secret key';
+        $secret_iv = 'This is my secret iv';
 
         // hash
         $key = hash('sha256', $secret_key);
